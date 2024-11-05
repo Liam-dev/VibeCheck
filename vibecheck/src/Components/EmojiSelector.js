@@ -1,14 +1,7 @@
+// vibecheck/src/Components/EmojiSelector.js
 import React from 'react';
 import { Button, Grid } from '@mui/material';
-
-const emojis = [
-  { icon: '😊', label: 'Happy' },
-  { icon: '😔', label: 'Sad' },
-  { icon: '😠', label: 'Angry' },
-  { icon: '😃', label: 'Excited' },
-  { icon: '😒', label: 'Bored' },
-  { icon: '😵', label: 'Melting Face' },
-];
+import { emojis } from './EmojiList';
 
 const EmojiSelector = ({ onSelect }) => {
   return (

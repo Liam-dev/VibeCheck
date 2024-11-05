@@ -1,7 +1,9 @@
+// vibecheck/src/Components/WordCloud.js
 import React from 'react';
 import { Grid, Typography } from '@mui/material';
+import { emojis } from './EmojiList';
 
-const emojis = ['😊', '😔', '😠', '😃', '😒', '😵'];
+const emojiIcons = emojis.map(emoji => emoji.icon);
 
 const WordCloud = ({ data }) => {
   return (
@@ -10,11 +12,11 @@ const WordCloud = ({ data }) => {
         <Grid item key={index} style={{ textAlign: 'center' }}>
           <Typography style={{ fontSize: `${entry.intensity * 10}px` }}>
             <span role="img" aria-label={entry.emoji} style={{ fontSize: `${entry.intensity * 10}px` }}>
-              {emojis.includes(entry.emoji) ? entry.emoji : '❓'}
+              {emojiIcons.includes(entry.emoji) ? entry.emoji : '❓'}
             </span>
           </Typography>
           {entry.name && (
-            <Typography style={{ fontSize: '14px', color: 'white' }}> {/* Ensure text color is visible */}
+            <Typography style={{ fontSize: '14px', color: 'white' }}>
               {entry.name}
             </Typography>
           )}
