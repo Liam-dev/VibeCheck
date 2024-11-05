@@ -1,7 +1,14 @@
-// vibecheck/src/Components/WordCloud.js
 import React from 'react';
 import { Grid, Typography } from '@mui/material';
-import { emojis } from './EmojiList';
+
+const emojis = [
+  { icon: '😊', label: 'Happy' },
+  { icon: '😔', label: 'Sad' },
+  { icon: '😠', label: 'Angry' },
+  { icon: '😃', label: 'Excited' },
+  { icon: '😒', label: 'Bored' },
+  { icon: '😵', label: 'Melting Face' },
+];
 
 const emojiIcons = emojis.map(emoji => emoji.icon);
 

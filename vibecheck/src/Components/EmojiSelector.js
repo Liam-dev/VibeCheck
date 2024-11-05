@@ -1,7 +1,15 @@
 // vibecheck/src/Components/EmojiSelector.js
 import React from 'react';
 import { Button, Grid } from '@mui/material';
-import { emojis } from './EmojiList';
+
+const emojis = [
+  { icon: '😊', label: 'Happy' },
+  { icon: '😔', label: 'Sad' },
+  { icon: '😠', label: 'Angry' },
+  { icon: '😃', label: 'Excited' },
+  { icon: '😒', label: 'Bored' },
+  { icon: '😵', label: 'Melting Face' },
+];
 
 const EmojiSelector = ({ onSelect }) => {
   return (
@@ -18,7 +26,7 @@ const EmojiSelector = ({ onSelect }) => {
               minWidth: '60px', // Ensure minimum button size
               minHeight: '60px'
             }}
-            onClick={() => onSelect(emoji.label)}
+            onClick={() => onSelect(emoji.icon)}
           >
             <span role="img" aria-label={emoji.label}>{emoji.icon}</span>
           </Button>
