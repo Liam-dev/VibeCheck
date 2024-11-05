@@ -1,19 +1,13 @@
 import React from 'react';
 import { Button, Grid } from '@mui/material';
-import EmojiEmotionsIcon from '@mui/icons-material/EmojiEmotions';
-import SentimentDissatisfiedIcon from '@mui/icons-material/SentimentDissatisfied';
-import SentimentVeryDissatisfiedIcon from '@mui/icons-material/SentimentVeryDissatisfied';
-import SentimentSatisfiedIcon from '@mui/icons-material/SentimentSatisfied';
-import SentimentSatisfiedAltIcon from '@mui/icons-material/SentimentSatisfiedAlt';
-import SentimentVerySatisfiedIcon from '@mui/icons-material/SentimentVerySatisfied';
 
 const emojis = [
-  { icon: <EmojiEmotionsIcon />, label: 'Happy' },
-  { icon: <SentimentDissatisfiedIcon />, label: 'Sad' },
-  { icon: <SentimentVeryDissatisfiedIcon />, label: 'Angry' },
-  { icon: <SentimentSatisfiedIcon />, label: 'Excited' },
-  { icon: <SentimentSatisfiedAltIcon />, label: 'Bored' },
-  { icon: <SentimentVerySatisfiedIcon />, label: 'Melting Face' },
+  { icon: '😊', label: 'Happy' },
+  { icon: '😔', label: 'Sad' },
+  { icon: '😠', label: 'Angry' },
+  { icon: '😃', label: 'Excited' },
+  { icon: '😒', label: 'Bored' },
+  { icon: '😵', label: 'Melting Face' },
 ];
 
 const EmojiSelector = ({ onSelect }) => {
@@ -23,10 +17,17 @@ const EmojiSelector = ({ onSelect }) => {
         <Grid item key={index}>
           <Button
             variant="contained"
-            style={{ backgroundColor: '#3F4652', color: 'white' }}
+            style={{
+              backgroundColor: '#3F4652',
+              color: 'white',
+              fontSize: '2rem', // Increase font size
+              padding: '20px', // Increase padding
+              minWidth: '60px', // Ensure minimum button size
+              minHeight: '60px'
+            }}
             onClick={() => onSelect(emoji.label)}
           >
-            {emoji.icon}
+            <span role="img" aria-label={emoji.label}>{emoji.icon}</span>
           </Button>
         </Grid>
       ))}

@@ -14,7 +14,7 @@ const IntensitySlider = ({ value, onChange }) => {
         marks
         min={1}
         max={5}
-        style={{ color: '#3F4652' }} // Update slider color
+        style={{ color: '#687386' }} // Update slider color
       />
     </div>
   );
