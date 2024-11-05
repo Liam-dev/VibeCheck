@@ -23,7 +23,7 @@ const EmojiSelector = ({ onSelect }) => {
         <Grid item key={index}>
           <Button
             variant="contained"
-            color="primary"
+            style={{ backgroundColor: '#3F4652', color: 'white' }}
             onClick={() => onSelect(emoji.label)}
           >
             {emoji.icon}

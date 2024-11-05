@@ -1,5 +1,7 @@
+/* App.css */
 .App {
   text-align: center;
+  background-color: #2B3240; /* Updated background color */
 }
 
 .App-logo {
@@ -14,7 +16,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #2B3240; /* Updated background color */
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -26,6 +28,15 @@
 
 .App-link {
   color: #61dafb;
+}
+
+.MuiButton-containedPrimary {
+  background-color: #3F4652; /* Updated button color */
+}
+
+.MuiTextField-root {
+  background-color: #3F4652; /* Updated selector field color */
+  color: white;
 }
 
 @keyframes App-logo-spin {

@@ -27,8 +27,14 @@ const App = () => {
         label="Your Name (optional)"
         value={name}
         onChange={(e) => setName(e.target.value)}
+        InputProps={{
+          style: { color: 'white', backgroundColor: '#3F4652' }
+        }}
+        InputLabelProps={{
+          style: { color: 'white' }
+        }}
       />
-      <Button variant="contained" color="primary" onClick={handleAddEntry}>
+      <Button variant="contained" color="primary" onClick={handleAddEntry} style={{ backgroundColor: '#3F4652' }}>
         Add Emotion
       </Button>
       <WordCloud data={entries} />

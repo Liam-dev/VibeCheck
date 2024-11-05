@@ -1,10 +1,11 @@
 import React from 'react';
 import { Slider, Typography } from '@mui/material';
+import './IntensitySlider.css';
 
 const IntensitySlider = ({ value, onChange }) => {
   return (
-    <div>
-      <Typography gutterBottom>Intensity of Emotion</Typography>
+    <div className="intensity-slider">
+      <Typography gutterBottom style={{ color: 'white' }}>Intensity of Emotion</Typography>
       <Slider
         value={value}
         onChange={onChange}
@@ -13,6 +14,7 @@ const IntensitySlider = ({ value, onChange }) => {
         marks
         min={1}
         max={5}
+        style={{ color: '#3F4652' }} // Update slider color
       />
     </div>
   );
