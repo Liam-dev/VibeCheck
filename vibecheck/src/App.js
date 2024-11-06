@@ -1,6 +1,6 @@
 // vibecheck/src/App.js
 import React, { useState } from 'react';
-import { Container, TextField, Button } from '@mui/material';
+import { Container, TextField, Button, Typography } from '@mui/material';
 import EmojiSelector from './Components/EmojiSelector';
 import IntensitySlider from './Components/IntensitySlider';
 import WordCloud from './Components/WordCloud';
@@ -25,7 +25,10 @@ const App = () => {
 
   return (
     <Container>
-      <h1>VibeCheck</h1>
+      <h1>VibeCheck 😎</h1>
+      <Typography variant="h6" style={{ color: 'white' }}>
+        Select an emoji to represent your current vibe
+      </Typography>
       <EmojiSelector onSelect={setEmoji} />
       <IntensitySlider value={intensity} onChange={(e, newValue) => setIntensity(newValue)} />
       <TextField
@@ -33,7 +36,7 @@ const App = () => {
         value={name}
         onChange={(e) => setName(e.target.value)}
         InputProps={{
-          style: { color: 'white', backgroundColor: '#3F4652' }
+          style: { color: 'white', backgroundColor: '#5d626b' }
         }}
         InputLabelProps={{
           style: { color: 'white' }

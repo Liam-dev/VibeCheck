@@ -18,7 +18,7 @@ const EmojiSelector = ({ onSelect }) => {
           <Button
             variant="contained"
             style={{
-              backgroundColor: selectedEmoji === emoji.icon ? '#afbbd1' : '#3F4652',
+              backgroundColor: selectedEmoji === emoji.icon ? '#747981' : '#3F4652',
               color: 'white',
               fontSize: '2rem',
               padding: '20px',
