@@ -18,7 +18,7 @@ const WordCloud = ({ data }) => {
       {data.map((entry, index) => (
         <Grid item key={index} style={{ textAlign: 'center' }}>
           <Typography style={{ fontSize: `${entry.intensity * 15}px` }}>
-            <span role="img" aria-label={entry.emoji} style={{ fontSize: `${entry.intensity * 20}px` }}>
+            <span role="img" aria-label={entry.emoji} style={{ fontSize: `${entry.intensity * 30}px` }}>
               {emojiIcons.includes(entry.emoji) ? entry.emoji : '❓'}
             </span>
           </Typography>

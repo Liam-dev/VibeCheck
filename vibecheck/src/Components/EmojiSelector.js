@@ -1,17 +1,16 @@
 // vibecheck/src/Components/EmojiSelector.js
-import React from 'react';
+import React, { useState } from 'react';
 import { Button, Grid } from '@mui/material';
-
-const emojis = [
-  { icon: '😊', label: 'Happy' },
-  { icon: '😔', label: 'Sad' },
-  { icon: '😠', label: 'Angry' },
-  { icon: '😃', label: 'Excited' },
-  { icon: '😒', label: 'Bored' },
-  { icon: '😵', label: 'Melting Face' },
-];
+import { emojis } from './EmojiList';
 
 const EmojiSelector = ({ onSelect }) => {
+  const [selectedEmoji, setSelectedEmoji] = useState('');
+
+  const handleSelect = (emoji) => {
+    setSelectedEmoji(emoji);
+    onSelect(emoji);
+  };
+
   return (
     <Grid container spacing={2}>
       {emojis.map((emoji, index) => (
@@ -19,14 +18,14 @@ const EmojiSelector = ({ onSelect }) => {
           <Button
             variant="contained"
             style={{
-              backgroundColor: '#3F4652',
+              backgroundColor: selectedEmoji === emoji.icon ? '#afbbd1' : '#3F4652',
               color: 'white',
-              fontSize: '2rem', // Increase font size
-              padding: '20px', // Increase padding
-              minWidth: '60px', // Ensure minimum button size
+              fontSize: '2rem',
+              padding: '20px',
+              minWidth: '60px',
               minHeight: '60px'
             }}
-            onClick={() => onSelect(emoji.icon)}
+            onClick={() => handleSelect(emoji.icon)}
           >
             <span role="img" aria-label={emoji.label}>{emoji.icon}</span>
           </Button>

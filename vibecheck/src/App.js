@@ -1,3 +1,4 @@
+// vibecheck/src/App.js
 import React, { useState } from 'react';
 import { Container, TextField, Button } from '@mui/material';
 import EmojiSelector from './Components/EmojiSelector';
@@ -12,6 +13,10 @@ const App = () => {
   const [entries, setEntries] = useState([]);
 
   const handleAddEntry = () => {
+    if (emoji === '') {
+      alert('Please select an emoji before adding emotion.');
+      return;
+    }
     setEntries([...entries, { emoji, intensity, name }]);
     setEmoji('');
     setIntensity(1);
@@ -24,7 +29,7 @@ const App = () => {
       <EmojiSelector onSelect={setEmoji} />
       <IntensitySlider value={intensity} onChange={(e, newValue) => setIntensity(newValue)} />
       <TextField
-        label="Your Name (optional)"
+        label={<i>Your Name (optional)</i>}
         value={name}
         onChange={(e) => setName(e.target.value)}
         InputProps={{
