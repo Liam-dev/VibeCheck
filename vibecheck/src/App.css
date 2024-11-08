@@ -47,3 +47,14 @@
     transform: rotate(360deg);
   }
 }
+.MuiButton-containedPrimary:hover {
+  background-color: #5a6572; /* Change to a lighter shade on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Add more prominent shadow effect */
+  transform: scale(1.05); /* Slightly increase size */
+}
+
+.emojiButton:hover {
+  background-color: #5a6572; /* Change to a lighter shade on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Add more prominent shadow effect */
+  transform: scale(1.05); /* Slightly increase size */
+}

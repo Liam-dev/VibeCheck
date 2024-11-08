@@ -7,8 +7,13 @@ const EmojiSelector = ({ onSelect }) => {
   const [selectedEmoji, setSelectedEmoji] = useState('');
 
   const handleSelect = (emoji) => {
-    setSelectedEmoji(emoji);
-    onSelect(emoji);
+    if (selectedEmoji === emoji) {
+      setSelectedEmoji('');
+      onSelect(''); // Pass empty string or null to indicate no selection
+    } else {
+      setSelectedEmoji(emoji);
+      onSelect(emoji);
+    }
   };
 
   return (
